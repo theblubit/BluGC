@@ -31,11 +31,29 @@ Item {
         contentWidth:   mainLayout.width
         contentHeight:  mainLayout.height
 
-        ColumnLayout {
+        GridLayout {
             id:         mainLayout
-            x:          Math.max(0, root.width / 2 - width / 2)
-            width:      Math.max(implicitWidth, ScreenTools.defaultFontPixelWidth * 50)
-            spacing:    ScreenTools.defaultFontPixelHeight
+            columns:    2
+            x:          Math.max(0, root.width / 2 - width / 2)                             // left aligned
+            // Ensure enough width for two panels — adjust multiplier as needed
+            width:      Math.max(implicitWidth, ScreenTools.defaultFontPixelWidth * 100)
+            rowSpacing: ScreenTools.defaultFontPixelHeight
+            columnSpacing: ScreenTools.defaultFontPixelWidth * 6
+
+            // Footer text spanning both columns
+            // Item {
+            //     Layout.columnSpan: 2
+            //     Layout.fillWidth: true
+            //     Layout.preferredHeight: ScreenTools.defaultFontPixelHeight * 2.0
+
+            //     Text {
+            //         anchors.horizontalCenter: parent.horizontalCenter
+            //         anchors.verticalCenter: parent.verticalCenter
+            //         text: qsTr("Made by mavlink and BluBit")
+            //         color: Qt.rgba(1,1,1,0.65)
+            //         font.pixelSize: ScreenTools.defaultFontPixelHeight
+            //     }
+            // }
         }
     }
 }

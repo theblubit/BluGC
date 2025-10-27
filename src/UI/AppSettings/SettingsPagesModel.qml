@@ -89,8 +89,8 @@ ListModel {
     }
 
     ListElement {
-        name: qsTr("Console")
-        url: "qrc:/qml/QGroundControl/Controls/AppMessages.qml"
+        name: qsTr("Logging")
+        url: "qrc:/qml/QGroundControl/Controls/AppLogging.qml"
         iconUrl: "qrc:/InstrumentValueIcons/conversation.svg"
         pageVisible: function() { return true }
     }
@@ -116,11 +116,11 @@ ListModel {
         pageVisible: function() { return ScreenTools.isDebug }
     }
 
-    ListElement {
-        name: qsTr("Palette Test")
-        url: "qrc:/qml/QGroundControl/AppSettings/QmlTest.qml"
-        iconUrl: "qrc:/InstrumentValueIcons/photo.svg"
-        pageVisible: function() { return ScreenTools.isDebug }
-    }
+    // ListElement {
+    //     name: qsTr("Palette Test")
+    //     url: "qrc:/qml/QGroundControl/AppSettings/QmlTest.qml"
+    //     iconUrl: "qrc:/InstrumentValueIcons/photo.svg"
+    //     pageVisible: function() { return ScreenTools.isDebug }
+    // }
 }
 

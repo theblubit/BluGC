@@ -1,3 +1,8 @@
+# ============================================================================
+# QGroundControl Build Configuration Options
+# All options can be overridden by custom builds via CustomOverrides.cmake
+# ============================================================================
+
 include(CMakeDependentOption)
 # The following options can be overriden by custom builds using the CustomOverrides.cmake file
 
@@ -98,5 +103,16 @@ option(QT_QML_GENERATE_QMLLS_INI "https://doc.qt.io/qt-6/cmake-variable-qt-qml-g
 # set(ENV{QT_DEBUG_PLUGINS} "1")
 # set(ENV{QML_IMPORT_TRACE} "1")
 
-# CMAKE
-# option(CMAKE_FIND_DEBUG_MODE "Print Used Search Paths When Finding a Package" OFF)
+# ============================================================================
+# CMake Package Manager (CPM)
+# ============================================================================
+
+# Uncomment to use named cache directories for better organization
+# set(CPM_USE_NAMED_CACHE_DIRECTORIES ON CACHE BOOL "Use package name subdirectories in CPM cache")
+
+# ============================================================================
+# CMake Configuration
+# ============================================================================
+
+# Uncomment for verbose package finding
+# option(CMAKE_FIND_DEBUG_MODE "Print search paths when finding packages" OFF)

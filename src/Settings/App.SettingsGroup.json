@@ -165,12 +165,19 @@
     "default":     ""
 },
 {
-    "name":                 "androidSaveToSDCard",
-    "shortDesc":            "Save to SD card",
-    "longDesc":             "Application data is saved to the sd card",
+    "name":                 "androidDontSaveToSDCard",
+    "shortDesc":            "Don't save to SD card, even if available",
+    "longDesc":             "If this option is enabled, application data will not be saved to the SD card.",
     "type":                 "bool",
     "default":              false,
     "qgcRebootRequired":    true
+},
+{
+    "name":             "tiandituToken",
+    "shortDesc": "Access token to TianDiTu maps",
+    "longDesc":  "Your personal access token for TianDiTu maps",
+    "type":             "string",
+    "default":     ""
 },
 {
     "name":             "mapboxToken",
